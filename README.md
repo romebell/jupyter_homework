@@ -1,4 +1,4 @@
-# Jupyter 
+# Jupyter Homework
 This is your Juypter Homework Assignment
 
 ## Assignment
