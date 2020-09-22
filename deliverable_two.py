@@ -134,18 +134,18 @@ def success(guess):
   index = 0
   for letter in secret_word:
     if letter == guess:
-        if index == 0:
-            underscored_secret_word = guess + underscored_secret_word[1:]
-        elif index < (len(secret_word) - 1):
-            underscored_secret_word = underscored_secret_word[0:((index * 2))] + guess + " " + underscored_secret_word[(index * 2 + 2):]
-        else:
-            underscored_secret_word = underscored_secret_word[:-2] + guess
+      if index == 0:
+        underscored_secret_word = guess + underscored_secret_word[1:]
+      elif index < (len(secret_word) - 1):
+        underscored_secret_word = underscored_secret_word[0:((index * 2))] + guess + " " + underscored_secret_word[(index * 2 + 2):]
+      else:
+        underscored_secret_word = underscored_secret_word[:-2] + guess
     index += 1
-    for letter in underscored_secret_word:
-        if letter == "_":
-            continue_game()
-            return
-            win()
+  for letter in underscored_secret_word:
+    if letter == "_":
+      continue_game()
+      return
+  win()
 
 
 # In[28]:
@@ -192,36 +192,36 @@ def continue_game():
 # In[ ]:
 
 
-if len(guess) > 1 and errors < 1:
-  print("It looks like you accidentally entered more than one character or guessed the wrong word.")
-  errors += 1
-  continue_game()
+    if len(guess) > 1 and errors < 1:
+      print("It looks like you accidentally entered more than one character or guessed the wrong word.")
+      errors += 1
+      continue_game()
       return
-try:
-  int(guess)
-  if errors < 1:
-    print("It looks like you accidentally entered a number.")
-    errors += 1
-    continue_game()
-    return
-except ValueError:
-    pass
+    try:
+      int(guess)
+      if errors < 1:
+        print("It looks like you accidentally entered a number.")
+        errors += 1
+        continue_game()
+        return
+    except ValueError:
+      pass
 
 
 
 # In[ ]:
 
 
-if guess in letters_guessed:
+    if guess in letters_guessed:
       already_guessed()
       return
     for letter in secret_word:
       if letter == guess:
         success(guess)
-return
-failure(guess)
-return
-else:
+        return
+    failure(guess)
+    return
+  else:
     lose()
     
 
