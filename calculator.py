@@ -7,16 +7,16 @@
 # define a calculator function
 def calculator():
 #     make input to ask user what operation and number to solve
-    calc = input('What operation would you like to do? (add, sub, multiply, divide)\n')
+    choose_calc = input('What operation would you like to do? (add, sub, multiply, divide)\n')
     num1 = input('Your first number\n')
     num2 = input('Your second number\n')
-    if calc == 'add':
+    if choose_calc == 'add':
         result = int(num1) + int(num2)
-    elif calc == 'sub':
+    elif choose_calc == 'sub':
         result = int(num1) - int(num2)
-    elif calc == 'multiply':
+    elif choose_calc == 'multiply':
         result = int(num1) * int(num2)
-    elif calc == 'divide':
+    elif choose_calc == 'divide':
         result = int(num1) / int(num2)
     return result
 print(calculator())
