@@ -1,5 +1,10 @@
-import random 
+#!/usr/bin/env python
+# coding: utf-8
 
+# In[1]:
+
+
+import random 
 words = [
     'beethoven',
     'Mozart',
@@ -8,6 +13,8 @@ words = [
     'Chopin'
 ]
 
+
+# In[2]:
 
 
 def hangman (lst):
@@ -86,6 +93,9 @@ def hangman (lst):
     |'''))
 
 
+# In[3]:
+
+
 def print_letter(idx, word, underscore):
     result = list(underscore)
     # print('RESULT',result)
@@ -98,11 +108,20 @@ def print_letter(idx, word, underscore):
     # print(underscore)
     return underscore 
 
+
+# In[ ]:
+
+
+
 def change_letter(index, lst):
     for i in range(len(lst)):
         if i == index:
             lst[i] = '.'
     return lst 
+
+
+# In[4]:
+
 
 def check_list(random_list):
     ele = random_list[0]
@@ -121,5 +140,8 @@ def check_list(random_list):
 hangman(words)
 
 
-    
+# In[ ]:
+
+
+
 
